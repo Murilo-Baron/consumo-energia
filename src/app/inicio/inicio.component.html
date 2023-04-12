@@ -1,3 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Consumo de energia</title>
+</head>
+<body>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">Formulário de Pesquisa de Consumo Energético</a>
@@ -20,30 +29,32 @@
   
       <div class="mb-3">
         <label for="num-comodos" class="form-label">Número de Cômodos:</label>
-        <input type="number" id="num-comodos" name="num-comodos" [(ngModel)]="numComodos" class="form-control" required>
+        <input type="number" id="num-comodos" name="num-comodos" [(ngModel)]="numComodos" class="form-control">
       </div>
   
       <div class="mb-3 form-check">
-        <input type="checkbox" id="maquina-lavar" name="maquina-lavar" [(ngModel)]="maquinaLavar" class="form-check-input">
+        <input type="checkbox" id="maquina-lavar" name="maquina-lavar" [(ngModel)]="maquinaLavar" class="form-check-input" (change)="onMaquinaChange()">
         <label for="maquina-lavar" class="form-check-label">Máquina de Lavar</label>
       </div>
   
       <div class="mb-3 form-check">
-        <input type="checkbox" id="secadora" name="secadora" [(ngModel)]="secadora" class="form-check-input">
+        <input type="checkbox" id="secadora" name="secadora" [(ngModel)]="secadora" class="form-check-input" (change)="onSecadoraChange()">
         <label for="secadora" class="form-check-label">Secadora</label>
       </div>
   
       <div class="mb-3 form-check">
-        <input type="checkbox" id="aparelhos-tv" name="aparelhos-tv" [(ngModel)]="aparelhosTv" class="form-check-input">
+        <input type="checkbox" id="aparelhos-tv" name="aparelhos-tv" [(ngModel)]="aparelhosTv" class="form-check-input"(change)="onAparelhosChange()">
         <label for="aparelhos-tv" class="form-check-label">Aparelhos de TV</label>
       </div>
   
       <div class="mb-3 form-check">
-        <input type="checkbox" id="computador" name="computador" [(ngModel)]="computador" class="form-check-input">
+        <input type="checkbox" id="computador" name="computador" [(ngModel)]="computador" class="form-check-input" (change)="onComputadorChange()">
         <label for="computador" class="form-check-label">Computador</label>
       </div>
   
       <button type="submit" class="btn btn-primary">Calcular Consumo Energético</button>
+      <p *ngIf="resultado">Resultado: {{ resultado }} kWh/mês</p>
     </form>
   </div>
-  
+</body>
+</html>
