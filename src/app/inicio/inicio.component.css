@@ -1,0 +1,27 @@
+/* Estilização da barra de navegação */
+.navbar-brand {
+    font-size: 1.5rem;
+  }
+  
+  .nav-link {
+    font-size: 1.2rem;
+  }
+  
+  /* Espaçamento entre a barra de navegação e o formulário */
+  .container {
+    margin-top: 2rem;
+  }
+  
+  /* Estilização do formulário */
+  .form-label {
+    font-size: 1.2rem;
+  }
+  
+  .form-check-label {
+    font-size: 1.2rem;
+  }
+  
+  .btn-primary {
+    font-size: 1.2rem;
+  }
+  

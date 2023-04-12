@@ -1,0 +1,49 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Formulário de Pesquisa de Consumo Energético</a>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Descrição</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+  <div class="container mt-5">
+    <form (submit)="onSubmit()">
+      <div class="mb-3">
+        <label for="qtd-pessoas" class="form-label">Quantidade de Pessoas:</label>
+        <input type="number" id="qtd-pessoas" name="qtd-pessoas" [(ngModel)]="qtdPessoas" class="form-control" required>
+      </div>
+  
+      <div class="mb-3">
+        <label for="num-comodos" class="form-label">Número de Cômodos:</label>
+        <input type="number" id="num-comodos" name="num-comodos" [(ngModel)]="numComodos" class="form-control" required>
+      </div>
+  
+      <div class="mb-3 form-check">
+        <input type="checkbox" id="maquina-lavar" name="maquina-lavar" [(ngModel)]="maquinaLavar" class="form-check-input">
+        <label for="maquina-lavar" class="form-check-label">Máquina de Lavar</label>
+      </div>
+  
+      <div class="mb-3 form-check">
+        <input type="checkbox" id="secadora" name="secadora" [(ngModel)]="secadora" class="form-check-input">
+        <label for="secadora" class="form-check-label">Secadora</label>
+      </div>
+  
+      <div class="mb-3 form-check">
+        <input type="checkbox" id="aparelhos-tv" name="aparelhos-tv" [(ngModel)]="aparelhosTv" class="form-check-input">
+        <label for="aparelhos-tv" class="form-check-label">Aparelhos de TV</label>
+      </div>
+  
+      <div class="mb-3 form-check">
+        <input type="checkbox" id="computador" name="computador" [(ngModel)]="computador" class="form-check-input">
+        <label for="computador" class="form-check-label">Computador</label>
+      </div>
+  
+      <button type="submit" class="btn btn-primary">Calcular Consumo Energético</button>
+    </form>
+  </div>
+  
